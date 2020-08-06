@@ -1,6 +1,8 @@
 # How to run the code
 1) Download the code and copy that location in your terminal/command-prompt.
+
 2)Run npm install for installing all the dependencies.
+
 3)Run ng serve for seeing the result on browser.
 
 
