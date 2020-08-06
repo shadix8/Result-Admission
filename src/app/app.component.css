@@ -1,0 +1,25 @@
+
+
+
+
+.container
+{
+    background-color: burlywood;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.Navbar
+{
+    margin-top: 2px;
+    border: 10px;
+    
+}
+a{
+     padding-right: 10px;
+     padding-left: 10px;
+     font-size: 25px;
+     font-weight: 900;
+     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     color: black;
+  
+}

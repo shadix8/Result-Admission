@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 offset-md-3">
+              <h3>Admission Form</h3>
+              <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                  <div class="form-group">
+                      <label>First Name</label>
+                      <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                      <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                          <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                          <div *ngIf="f.firstName.errors.required.maxlength">First Name should not be more than 20</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label>Last Name</label>
+                      <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                      <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                          <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                          
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label>Class</label>
+                      <input type="text" formControlName="class" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.class.errors }" />
+                      <div *ngIf="submitted && f.class.errors" class="invalid-feedback">
+                          <div *ngIf="f.class.errors.required">Class is required</div>
+                        
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label>Year of Passing</label>
+                      <input type="number" formControlName="yearofpassing" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.yearofpassing.errors }" />
+                      <div *ngIf="submitted && f.yearofpassing.errors" class="invalid-feedback">
+                          <div *ngIf="f.yearofpassing.errors.required">Year of passing required</div>
+                          
+                      </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Percentage</label>
+                    <input type="number" formControlName="Percentage" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Percentage.errors }" />
+                    <div *ngIf="submitted && f.Percentage.errors" class="invalid-feedback">
+                        <div *ngIf="f.Percentage.errors.required">Percentage Required</div>
+                        
+                    </div>
+                </div>
+                  <div class="form-group">
+                      <button class="btn btn-primary">Register</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
